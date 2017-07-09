@@ -10,7 +10,6 @@ Use multi-process and cache to speed up "uglifyjs-webpack-plugin".
 Hash: 0597707cf257ceb59ef1
 Version: webpack 3.1.0
 Time: 10944ms
-[...]
 -----------------------------------
 [DEMO 2] UglifyjsWebpackPlugin Options: {
     "cache": false,
@@ -19,7 +18,6 @@ Time: 10944ms
 Hash: 0597707cf257ceb59ef1
 Version: webpack 3.1.0
 Time: 6774ms
-[...]
 -----------------------------------
 [DEMO 3] UglifyjsWebpackPlugin Options: {
     "cache": true,
@@ -30,4 +28,4 @@ Version: webpack 3.1.0
 Time: 1458ms
 ```
 
-Demo: [![Build Status](https://travis-ci.org/aui/uglifyjs-webpack-plugin-demo.svg?branch=master)](https://travis-ci.org/aui/uglifyjs-webpack-plugin-demo)
+More: [![Build Status](https://travis-ci.org/aui/uglifyjs-webpack-plugin-demo.svg?branch=master)](https://travis-ci.org/aui/uglifyjs-webpack-plugin-demo)
