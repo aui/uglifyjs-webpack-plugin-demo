@@ -30,7 +30,10 @@ module.exports = (env) => {
             jquery: './src/jquery.js',
             angular: './src/angular.js',
             react: './src/react.js',
-            vue: './src/vue.js'
+            vue: './src/vue.js',
+            lodash: './src/lodash.js',
+            backbone: './src/backbone.js',
+            ember: './src/ember.js'
         },
         output: {
             path: path.join(__dirname, 'dist'),
