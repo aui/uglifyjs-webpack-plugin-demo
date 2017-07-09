@@ -1,0 +1,33 @@
+{
+  "name": "uglifyjs-webpack-plugin-demo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --env.cache=false --env.parallel=false --env.id=1",
+    "build:parallel": "webpack --env.cache=false --env.parallel=true --env.id=2",
+    "build:parallel:cache": "webpack --env.cache=true --env.parallel=true --env.id=3",
+    "start": "npm run install-uglifyjs-webpack-plugin && npm run build && npm run build:parallel && npm run build:parallel:cache",
+    "install-uglifyjs-webpack-plugin": "git clone https://github.com/aui/uglifyjs-webpack-plugin.git lib/uglifyjs-webpack-plugin && cd lib/uglifyjs-webpack-plugin && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aui/uglifyjs-webpack-plugin-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aui/uglifyjs-webpack-plugin-demo/issues"
+  },
+  "homepage": "https://github.com/aui/uglifyjs-webpack-plugin-demo#readme",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "jquery": "^3.2.1",
+    "react": "^15.6.1",
+    "uglifyjs-webpack-plugin": "git+ssh://git@github.com/aui/uglifyjs-webpack-plugin.git",
+    "vue": "^2.3.4",
+    "webpack": "^3.1.0"
+  }
+}
