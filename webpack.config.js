@@ -20,7 +20,6 @@ module.exports = (env) => {
 `-----------------------------------
 
 [DEMO ${env.id}] UglifyjsWebpackPlugin Options: ${JSON.stringify(options, null, 4)}
-
 `
     );
     const now = Date.now();
