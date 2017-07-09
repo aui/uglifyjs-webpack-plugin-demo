@@ -33,7 +33,8 @@ module.exports = (env) => {
             vue: './src/vue.js',
             lodash: './src/lodash.js',
             backbone: './src/backbone.js',
-            ember: './src/ember.js'
+            ember: './src/ember.js',
+            underscore: './src/underscore.js'
         },
         output: {
             path: path.join(__dirname, 'dist'),
