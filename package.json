@@ -6,11 +6,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "demo": "npm run build && npm run build:parallel && npm run build:parallel:cache",
     "build": "webpack --env.cache=false --env.parallel=false --env.id=1",
     "build:parallel": "webpack --env.cache=false --env.parallel=true --env.id=2",
     "build:parallel:cache": "webpack --env.cache=true --env.parallel=true --env.id=3",
-    "start": "npm run install-uglifyjs-webpack-plugin && npm run build && npm run build:parallel && npm run build:parallel:cache",
-    "install-uglifyjs-webpack-plugin": "git clone https://github.com/aui/uglifyjs-webpack-plugin.git lib/uglifyjs-webpack-plugin && cd lib/uglifyjs-webpack-plugin && npm install"
+    "start": "npm run install-uglifyjs-webpack-plugin && npm run demo",
+    "install-uglifyjs-webpack-plugin": "git clone https://github.com/aui/uglifyjs-webpack-plugin.git lib/uglifyjs-webpack-plugin && cd lib/uglifyjs-webpack-plugin && npm install && cd ../.."
   },
   "repository": {
     "type": "git",

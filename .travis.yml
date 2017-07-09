@@ -9,10 +9,6 @@ branches:
   - master
 install:
   - npm install
-  - git clone https://${GH_TOKEN}@github.com/aui/uglifyjs-webpack-plugin.git lib/uglifyjs-webpack-plugin
-  - cd lib/uglifyjs-webpack-plugin
-  - npm install
+  - npm run install-uglifyjs-webpack-plugin
 script:
-  - npm run build
-  - npm run build:parallel
-  - npm run build:parallel:cache
+  - npm run demo
