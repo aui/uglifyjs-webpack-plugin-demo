@@ -7,7 +7,7 @@ const UglifyjsWebpackPlugin = require('./lib/uglifyjs-webpack-plugin');
 module.exports = (env) => {
     const options = {
         parallel: {
-            cache: findCacheDir({ name: 'uglifyjs-webpack-plugin' }),
+            cache: findCacheDir({ name: 'uglifyjs-webpack-plugin-demo' }),
             workers: Math.max(os.cpus().length - 1, 1)
         }
     };
