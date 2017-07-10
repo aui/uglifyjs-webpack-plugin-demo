@@ -1,19 +1,25 @@
 const os = require('os');
 const path = require('path');
 const webpack = require('webpack');
+const findCacheDir = require('find-cache-dir');
 const UglifyjsWebpackPlugin = require('./lib/uglifyjs-webpack-plugin');
 
 module.exports = (env) => {
     const options = {
-        cache: true,
-        maxWorkers: os.cpus().length
+        parallel: {
+            cache: findCacheDir({ name: 'uglifyjs-webpack-plugin' }),
+            workers: Math.max(os.cpus().length - 1, 1)
+        }
     };
     if (env.cache) {
-        options.cache = ({"true": true, "false": false})[env.cache];
+        const cache = ({"true": true, "false": false})[env.cache];
+        if (!cache) {
+            options.parallel.cache = false;
+        }
     }
 
     if (env.parallel === 'false') {
-        options.maxWorkers = 1;
+        options.parallel.workers = 1;
     }
 
     console.log(
