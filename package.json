@@ -10,8 +10,7 @@
     "build": "webpack --color --env.cache=false --env.parallel=false --env.id=1",
     "build:parallel": "webpack --color --env.cache=false --env.parallel=true --env.id=2",
     "build:parallel:cache": "webpack --color --env.cache=true --env.parallel=true --env.id=3",
-    "start": "npm run install-uglifyjs-webpack-plugin && npm run demo",
-    "install-uglifyjs-webpack-plugin": "git clone https://github.com/aui/uglifyjs-webpack-plugin.git lib/uglifyjs-webpack-plugin && cd lib/uglifyjs-webpack-plugin && npm install && cd ../.."
+    "start": "npm run demo"
   },
   "repository": {
     "type": "git",
@@ -32,6 +31,9 @@
     "lodash": "^4.17.4",
     "react": "^15.6.1",
     "vue": "^2.3.4",
-    "webpack": "^3.1.0"
+    "webpack": "^4.0.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^2.0.9"
   }
 }
